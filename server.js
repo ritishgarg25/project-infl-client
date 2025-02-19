@@ -22,8 +22,16 @@ let config = {
     database: "project",
     dateStrings: true
 }*/
-
-
+let config = {
+    host: "bc402zmtj55lxqg0qxu4-mysql.services.clever-cloud.com",
+    user: "ur970jvqy4jtmrop",
+    password: "LSM2JRcUovTdeSAJ5NVc",
+    database: "bc402zmtj55lxqg0qxu4",
+    dateStrings: true,
+    keepAliveInitialDelay: 10000,
+    enableKeepAlive: true,
+}
+/*
 let config = {
     host: "bcwznynuyrgm7pgxyry1-mysql.services.clever-cloud.com",
     user: "u4hgolpcpfong8uo",
@@ -32,7 +40,7 @@ let config = {
     dateStrings: true,
     keepAliveInitialDelay: 10000,
     enableKeepAlive:true,
-}
+} */
 var mysql = mysql2.createConnection(config);
 mysql.connect(function (err) {
     if (err == null) {
