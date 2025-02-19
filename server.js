@@ -41,14 +41,6 @@ mysql.connect(function (err) {
     else
         console.log(err.message);
 })
-const connection = mysql.createConnection(dbConfig);
-connection.connect();
-
-const pool = mysql.createPool(dbConfig);
-pool.getConnection((err, connection) => {
-    if (err) throw err;
-    connection.release();
-});
 
 app.get("/", function (req, resp) {
     let path = __dirname + "/public/index.html";
